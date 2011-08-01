@@ -1,10 +1,10 @@
-package testbean;
+package vogella.testbean;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import writer.IWriter;
+import vogella.writer.IWriter;
 
 @Service
 public class MySpringBeanWithDependency {

@@ -1,4 +1,4 @@
-package writer;
+package vogella.writer;
 
 
 public class NiceWriter implements IWriter {

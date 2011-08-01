@@ -46,17 +46,17 @@
         The most commonly used annotation is @Autowired, which instructs Spring to
         dependency inject an object into your class.
     -->   
-    <context:component-scan base-package="testbean">
+    <context:component-scan base-package="vogella.testbean">
         <context:exclude-filter expression=".*_Roo_.*" type="regex"/>
         <context:exclude-filter expression="org.springframework.stereotype.Controller" type="annotation"/>
     </context:component-scan>
     
     <!-- 
-        Implementation of IWriter to use either writer.NiceWriter or writer.writer, the bean id
-        is not used, it's @Autowired by type. Writer and NiceWriter should not have @Component, 
-        @Repository, @Service, @Controller annotations, because it will be exposed through XML. 
-        mySpringBeanWithDependency is instead @Service and @Autowired.
+        Implementation of IWriter to use either vogella.writer.NiceWriter or vogella.writer.writer, 
+        the bean id is not used, it's @Autowired by type. Writer and NiceWriter should not have 
+        @Component, @Repository, @Service, @Controller annotations, because it will be exposed through 
+        XML. mySpringBeanWithDependency is instead @Service and @Autowired.
      -->
-    <bean id="myWriter" class="writer.NiceWriter"/>    
+    <bean id="myWriter" class="vogella.writer.NiceWriter"/>    
     
 </beans>
