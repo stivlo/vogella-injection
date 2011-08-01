@@ -1,0 +1,17 @@
+= Spring Dependency Injection =
+
+Self contained tiny Spring Application that shows how to select one of the two
+possible implementations of an IWriter interface. I created the plumbing with
+Spring Roo. It's different from Vogella example, since I didn't put the @Service
+annotation in writer.Writer and writer.NiceWriter, so I can insert the implementation
+to be used in src/main/resources/META-INF/spring/applicationContext.xml
+
+The testbean.MySpringBeanWithDependency instead is declared as @Service and @Autowired
+on the constructor, so that there is no way to create an object without the mandatory
+dependency and I have only to name the implementation to use in applicationContext.xml
+and I don't need to specify explicitly the plumbing of MySpringBeanWithDependency.
+
+See the article http://www.vogella.de/articles/SpringDependencyInjection/article.html
+
+
+
